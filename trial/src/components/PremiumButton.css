@@ -1,0 +1,36 @@
+/* Add this to your css files: PremiumButton.css, LoginModal.css, App.css, etc. */
+
+.premium-btn {
+  padding: 1rem 2.5rem;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: transparent;
+  color: #25d366;
+  border: 3px solid;
+  border-image: linear-gradient(90deg, #25d366, #a0ffce, #25d366) 1;
+  box-shadow: 0 4px 32px 0 rgba(37,211,102,0.2), 0 1.5px 7px rgba(0,0,0,.07);
+  position: relative;
+  overflow: hidden;
+  transition: color 0.2s;
+}
+.premium-btn::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: 0;
+  background: linear-gradient(120deg,#25d366, #a0ffce, #24ffb1, #25d366, #0c835b);
+  filter: blur(12px);
+  opacity: 0.7;
+  transition: opacity 0.3s, filter 0.3s;
+}
+.premium-btn:hover {
+  color: white;
+  background: linear-gradient(90deg,#25d366, #72e486);
+  box-shadow: 0 6px 24px 0 rgba(37, 211, 102, 0.11),
+              0 2px 4px rgba(0,0,0,0.08);
+}
+.premium-btn:hover::before {
+  opacity: 1;
+  filter: blur(16px);
+}

@@ -1,0 +1,212 @@
+/* Modal overlay (backscreen) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+/* Modal card container */
+.modal-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ffffff, #e6f0ff);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  padding: 36px 48px;
+  max-width: 420px;
+  width: 90vw;
+  z-index: 1001;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2d3e;
+  transition: transform 0.3s ease;
+}
+
+/* Modal open animation */
+.modal-animate {
+  animation: modalZoom 0.35s ease forwards;
+}
+
+@keyframes modalZoom {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: #25d366;
+  outline: none;
+}
+
+/* Logo area */
+.modal-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-wa-brand {
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #25d366;
+  user-select: none;
+}
+
+/* Modal title */
+.modal-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+
+/* Form labels */
+.modal-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #344054;
+}
+
+/* Form inputs */
+.modal-form input[type="email"],
+.modal-form input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.modal-form input[type="email"]:focus,
+.modal-form input[type="password"]:focus {
+  border-color: #25d366;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.5);
+}
+
+/* Password wrapper and show/hide button */
+.password-wrap {
+  position: relative;
+}
+
+.show-hide {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #25d366;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  padding: 0 6px;
+}
+
+/* Remember me checkbox */
+.remember-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #556677;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.remember-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.remember-label input[type="checkbox"]:checked {
+  background-color: #25d366;
+  border-color: #25d366;
+}
+
+/* Error message */
+.error-msg {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #25d366;
+  color: white;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #1ea34d;
+  outline: none;
+}
+
+/* Switch form text & button */
+.form-switch-text {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #556677;
+  text-align: center;
+  user-select: none;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #25d366;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.switch-btn:hover,
+.switch-btn:focus {
+  text-decoration: underline;
+  outline: none;
+}

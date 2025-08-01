@@ -1,0 +1,234 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.modal-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ffffff, #f6faff);
+  border-radius: 28px;
+  box-shadow:
+    0 20px 40px rgba(37, 211, 102, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 36px 48px;
+  max-width: 420px;
+  width: 90vw;
+  z-index: 1001;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  max-height: 90vh;
+  overflow-y: auto;
+  transition: transform 0.35s ease;
+}
+
+.modal-animate {
+  animation: modalZoom 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes modalZoom {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: #25d366;
+  outline: none;
+}
+
+.modal-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.modal-logo {
+  width: 40px;
+  height: 40px;
+  user-select: none;
+}
+.modal-brand {
+  font-weight: 900;
+  font-size: 1.65rem;
+  color: #25d366;
+  user-select: none;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 26px;
+  letter-spacing: 1.1px;
+  user-select: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #334155;
+  user-select: none;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 2.5px solid #d1d5db;
+  font-size: 1.05rem;
+  margin-top: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #f9fafb;
+  user-select: text;
+}
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+  border-color: #25d366;
+  outline: none;
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.35);
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.show-hide {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #16a34a;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  user-select: none;
+  padding: 0;
+  transition: color 0.25s ease;
+}
+.show-hide:hover,
+.show-hide:focus {
+  color: #25d366;
+  outline: none;
+}
+
+.remember-label {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #374151;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  user-select: none;
+}
+.remember-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  accent-color: #25d366;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-weight: 700;
+  margin-top: 18px;
+  font-size: 0.95rem;
+  user-select: none;
+  text-align: center;
+}
+
+.submit-btn {
+  margin-top: 32px;
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 60px;
+  border: none;
+  background: linear-gradient(90deg, #25d366, #1ca34a);
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.35);
+}
+.submit-btn:hover,
+.submit-btn:focus {
+  background: linear-gradient(90deg, #1ea34d, #168a3d);
+  box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6);
+  outline: none;
+}
+
+.switch-text {
+  margin-top: 28px;
+  font-size: 1rem;
+  color: #475569;
+  text-align: center;
+  user-select: none;
+}
+.switch-btn {
+  background: none;
+  border: none;
+  color: #25d366;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+.switch-btn:hover,
+.switch-btn:focus {
+  color: #1ea34d;
+  outline: none;
+  text-decoration: underline;
+}
+
+/* Responsive for small viewports */
+@media (max-width: 480px) {
+  .modal-card {
+    padding: 28px 28px 32px;
+    max-width: 95vw;
+  }
+
+  .modal-title {
+    font-size: 1.75rem;
+  }
+
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+}

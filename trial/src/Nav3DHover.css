@@ -1,0 +1,26 @@
+.nav3dhover-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+  outline-offset: 4px;
+}
+.nav3dhover-container:focus {
+  outline: 2px solid #25d366;
+  outline-offset: 4px;
+}
+.nav3dhover-canvas {
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50%;
+}
+.nav3dhover-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: white;
+  white-space: nowrap;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
