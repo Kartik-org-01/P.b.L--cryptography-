@@ -8,7 +8,7 @@ export default function Navbar({ user, onLoginClick, onLogoutClick, onNavClick }
 
   return (
     <header className="navbar">
-      <div className="navbar-logo">Message X</div>
+      <div className="navbar-logo">X</div>
       <nav className="navbar-menu" aria-label="Primary Navigation">
         <Nav3DHover label="Home" onClick={() => alert("Home clicked")} />
         <Nav3DHover label="Product" onClick={() => alert("Product clicked")} />

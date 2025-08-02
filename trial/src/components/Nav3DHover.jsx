@@ -100,3 +100,11 @@ export default function Nav3DHover({ label, onClick }) {
     </div>
   );
 }
+// Nav3DHover.jsx
+export default function Nav3DHover({ label, onClick }) {
+  return (
+    <button className="nav3dhover-btn" onClick={onClick} type="button">
+      {label}
+    </button>
+  );
+}
